@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Marvelous Amaka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-mark">Marvelous Amaka</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section style="padding:100px 0;">
+  <div class="wrap">
+    <h2 style="font-size:38px; margin-bottom:24px;">Let's Connect</h2>
+    <p style="color:var(--text-dim); max-width:40ch; font-size:15px; margin-bottom:28px;">
+      Open to backend development opportunities and anyone who wants to talk Python or Django.
+    </p>
+
+    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:48px;">
+      <a href="mailto:youremail@example.com" style="color:var(--text-dim); width:fit-content;">↘ marvelamaka1@gmail.com</a>
+      <a href="https://github.com/marvelamaka1" target="_blank" style="color:var(--text-dim); width:fit-content;">↘ github.com/marvelamaka1</a>
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank" style="color:var(--text-dim); width:fit-content;">↘ linkedin.com/in/marvelous-chiamaka-096b98274</a>
+    </div>
+
+    <form onsubmit="return false;" style="display:flex; flex-direction:column; gap:16px; max-width:420px;">
+      <div>
+        <label style="display:block; font-size:12px; color:var(--text-faint); margin-bottom:6px;">Name</label>
+        <input type="text" placeholder="Your name" style="width:100%; background:var(--bg-panel); border:1px solid var(--line); border-radius:2px; padding:12px 14px; color:var(--text); font-family:'Inter',sans-serif; font-size:14px;">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; color:var(--text-faint); margin-bottom:6px;">Email</label>
+        <input type="email" placeholder="you@example.com" style="width:100%; background:var(--bg-panel); border:1px solid var(--line); border-radius:2px; padding:12px 14px; color:var(--text); font-family:'Inter',sans-serif; font-size:14px;">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; color:var(--text-faint); margin-bottom:6px;">Message</label>
+        <textarea placeholder="Say hello" style="width:100%; min-height:100px; background:var(--bg-panel); border:1px solid var(--line); border-radius:2px; padding:12px 14px; color:var(--text); font-family:'Inter',sans-serif; font-size:14px; resize:vertical;"></textarea>
+      </div>
+      <button type="submit" style="align-self:flex-start; padding:13px 26px; background:var(--text); color:var(--bg); border:none; border-radius:2px; font-size:13px; cursor:pointer;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
