@@ -45,11 +45,10 @@
                 </p>
 
                 <div class="tech-stack">
-                {% for tech in project.technologies.split %}
-                    <span class="tech-badge">{{ tech }}</span>
-                {% endfor %}
-                </div>
-
+                <span class="tech-badge">
+                    {{ project.technologies }}
+                </span>
+            </div>
                 <div class="project-links">
 
                     <a class="github-btn"
