@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -160,6 +160,9 @@ cloudinary.config(
     api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
     secure=True,
 )
+print("Cloud Name:", os.environ.get("CLOUDINARY_CLOUD_NAME"))
+print("API Key:", os.environ.get("CLOUDINARY_API_KEY"))
+print("API Secret exists:", bool(os.environ.get("CLOUDINARY_API_SECRET")))
 
 # Static files storage for Render
 STORAGES = {
