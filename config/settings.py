@@ -153,6 +153,9 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Static files storage for Render
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
