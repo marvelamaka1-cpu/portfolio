@@ -1,0 +1,151 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Home · Marvelous Chiamaka{% endblock %}
+
+{% block content %}
+
+<section class="hero wrap">
+
+    <div class="hero-left">
+
+        <p class="hero-tag"></p>
+
+        <h1 class="hero-name">
+            Marvelous <br> Chiamaka
+        </h1>
+
+        <h2 class="hero-role">
+            Python Backend Developer
+        </h2>
+
+        <p class="hero-bio">
+            I build secure, scalable and user-friendly web applications using
+            Python, Django, Django REST Framework and PostgreSQL.
+
+            I'm passionate about writing clean code, solving real-world
+            problems and continuously improving my skills as a software
+            developer.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'portfolio:projects' %}" class="btn-gold">
+                View Projects
+            </a>
+
+            <a href="/media/resume/Marvelous_Chiamaka_CV.pdf"
+               target="_blank"
+               class="btn-outline">
+                Download Resume
+            </a>
+
+        </div>
+
+        <div class="hero-tech">
+
+            <span>Python</span>
+            <span>Django</span>
+            <span>Django REST Framework</span>
+            <span>PostgreSQL</span>
+            <span>Git</span>
+        
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="photo-ring">
+
+            <img src="{% static 'portfolio/photo.jpg' %}"
+                 alt="Marvelous Chiamaka">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section wrap">
+
+    <h2 class="section-title">
+        Featured Projects
+    </h2>
+
+    <div class="featured-projects">
+
+        <div class="featured-project">
+            <h3>TaskFlow</h3>
+
+            <p>
+                A task management web application built with Django that allows
+                users to organize projects, track tasks, and monitor progress.
+            </p>
+
+            <a href="{% url 'portfolio:projects' %}" class="project-link">
+                View Project →
+            </a>
+        </div>
+
+        <div class="featured-project">
+            <h3>Lost Temple Adventure</h3>
+
+            <p>
+                A Python text-based adventure game featuring puzzles,
+                branching storylines, and inventory management.
+            </p>
+
+            <a href="{% url 'portfolio:projects' %}" class="project-link">
+                View Project →
+            </a>
+        </div>
+
+        <div class="featured-project">
+            <h3>Notes REST API</h3>
+
+            <p>
+                A RESTful API built with Django REST Framework providing
+                authentication and complete CRUD functionality.
+            </p>
+
+            <a href="{% url 'portfolio:projects' %}" class="project-link">
+                View Project →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section wrap">
+
+    <h2 class="section-title">
+        Let's Work Together
+    </h2>
+
+    <p class="section-lead">
+
+        I'm open to internships, freelance opportunities and backend
+        development roles.
+
+        If you'd like to collaborate or discuss a project,
+        I'd love to hear from you.
+
+    </p>
+
+    <div style="text-align:center; margin-top:35px;">
+
+        <a href="{% url 'portfolio:contact' %}"
+           class="btn-gold">
+
+            Get In Touch
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

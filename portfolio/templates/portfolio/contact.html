@@ -1,0 +1,86 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Contact · Marvelous Chiamaka{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="wrap">
+
+        <h1 class="section-title">Let's Work Together</h1>
+
+        <p class="section-subtitle">
+            I'm open to internship opportunities, freelance projects and backend development roles.
+        </p>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h2>Get In Touch</h2>
+
+                <p><strong>Email</strong><br>marvelamaka1@gmail.com</p>
+
+                <p><strong>GitHub</strong><br>
+                    <a href="https://github.com/marvelamaka1-cpu" target="_blank">
+                        github.com/marvelamaka1-cpu
+                    </a>
+                </p>
+
+                <p><strong>LinkedIn</strong><br>
+                    <a href="https://linkedin.com/in/marvelous-chiamaka-096b9874" target="_blank">
+                        linkedin.com/in/marvelous-chiamaka-096b9874
+                    </a>
+                </p>
+
+                <p><strong>Location</strong><br>Nigeria</p>
+
+            </div>
+
+            <div class="contact-card">
+                {% if sent %}
+            <div class="success-message">
+                ✅ Thank you! Your message has been sent successfully. I'll get back to you soon.
+            </div>
+            {% endif %}
+
+                <form method="POST" class="contact-form">
+
+                    {% csrf_token %}
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        name="message"
+                        rows="6"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn-gold">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

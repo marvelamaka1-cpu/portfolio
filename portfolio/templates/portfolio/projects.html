@@ -1,0 +1,88 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<section class="projects-page">
+
+    <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>
+            A collection of applications I've built using Python, Django,
+            Django REST Framework, HTML, CSS and JavaScript.
+        </p>
+    </div>
+
+    <div class="projects-container">
+
+        {% for project in project_list %}
+
+        <div class="project-card">
+
+            <div class="project-image">
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% endif %}
+            </div>
+
+            <div class="project-info">
+
+                {% if project.featured %}
+                    <span class="featured-badge">Featured Project</span>
+                {% endif %}
+
+               <h2>
+
+                <a href="{% url 'portfolio:project_detail' project.pk %}">
+                    {{ project.title }}
+                </a>
+
+            </h2>
+
+                <p class="description">
+                    {{ project.description }}
+                </p>
+
+                <div class="tech-stack">
+                {% for tech in project.technologies.split %}
+                    <span class="tech-badge">{{ tech }}</span>
+                {% endfor %}
+                </div>
+
+                <div class="project-links">
+
+                    <a class="github-btn"
+                       href="{{ project.github_url }}"
+                       target="_blank">
+                        💻 GitHub
+                    </a>
+
+                    {% if project.live_demo %}
+                    <a class="demo-btn"
+                       href="{{ project.live_demo }}"
+                       target="_blank">
+                        🚀 Live Demo
+                    </a>
+                    <a href="{% url 'portfolio:project_detail' project.pk %}">
+                        View Details
+                    </a>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <p>No projects have been added yet.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

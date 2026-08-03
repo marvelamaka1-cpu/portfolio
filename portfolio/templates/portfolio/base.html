@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}Marvelous Chiamaka{% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-inner">
+
+        <a href="{% url 'portfolio:home' %}" class="nav-mark">
+            Marvelous
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+
+            <li><a href="{% url 'portfolio:about' %}">About</a></li>
+
+            <li><a href="{% url 'portfolio:skills' %}">Skills</a></li>
+
+            <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+
+            <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+
+            <li>
+                <a href="/media/resume/Marvelous_Chiamaka_CV.pdf"
+                   target="_blank">
+                    Resume
+                </a>
+            </li>
+
+                
+        </ul>
+
+    </div>
+
+</nav>
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<footer>
+
+    <div class="wrap">
+
+        <h3>Marvelous Chiamaka</h3>
+
+        <p>Python Backend Developer</p>
+
+        <div class="footer-links">
+
+            <a href="https://github.com/marvelamaka1-cpu"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://linkedin.com/in/marvelous-chiamaka-096b9874"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="mailto:marvelamaka1@gmail.com">
+                Email
+            </a>
+
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Marvelous Chiamaka. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
