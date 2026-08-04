@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Contact, Skill, Project
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
@@ -48,7 +50,7 @@ def home(request):
         "skill_count": Skill.objects.count(),
     }
 
-    return render(request, "portfolio/home.html", context)
+    return render(request, "portfolio/home.html")
 
 
 def about(request):
