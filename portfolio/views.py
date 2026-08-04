@@ -50,7 +50,7 @@ def home(request):
         "skill_count": Skill.objects.count(),
     }
 
-    return render(request, "portfolio/home.html")
+    return render(request, "portfolio/home.html", context)
 
 
 def about(request):
