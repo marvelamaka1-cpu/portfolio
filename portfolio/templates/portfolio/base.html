@@ -39,13 +39,13 @@
             <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
 
             <li>
-               <a href="https://res.cloudinary.com/d0rlbdjy/image/upload/v1785878189/Marvelous_Chiamaka_CV.pdf_u7itig.pdf"
-                target="_blank">
-                    Resume
-                </a>
-                   
-                    Resume
-                </a>
+               {% load static %}
+
+            <a href="{% static 'portfolio/file/Marvelous_Chiamaka_CV.pdf' %}"
+            target="_blank">
+                Resume
+            </a>
+
             </li>
 
                 
